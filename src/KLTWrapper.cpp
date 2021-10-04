@@ -22,7 +22,7 @@
 #include "KLTWrapper.hpp"
 
 #include <vector>
-#include <highgui.h>
+#include <opencv/highgui.h>
 
 KLTWrapper::KLTWrapper(void)
 {
@@ -149,7 +149,7 @@ void KLTWrapper::RunTrack(IplImage * imgGray, IplImage * prevGray)
 
 void KLTWrapper::SwapData(IplImage * imgGray)
 {
-	cvCopyImage(imgGray, imgPrevGray);
+	cvCopy(imgGray, imgPrevGray, 0); // edited
 	CV_SWAP(prev_pyramid, pyramid, swap_temp);
 	CV_SWAP(points[0], points[1], swap_points);
 }

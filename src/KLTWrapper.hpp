@@ -21,7 +21,12 @@
 
 #pragma once
 
-#include <cv.h>
+#include <opencv/cv.h>
+#include <opencv2/opencv.hpp>
+#include <opencv2/core/core_c.h>
+#include <opencv2/imgproc/imgproc_c.h>
+#include <opencv2/imgproc/types_c.h>
+#include <opencv2/videostab.hpp>
 
 #define GRID_SIZE_W (32)
 #define GRID_SIZE_H (24)
